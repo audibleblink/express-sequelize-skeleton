@@ -1,0 +1,8 @@
+FROM node:7
+MAINTAINER github/audibleblink
+WORKDIR /app
+VOLUME /app
+
+EXPOSE 3000
+CMD ["npm", "run", "dev-start"]
+

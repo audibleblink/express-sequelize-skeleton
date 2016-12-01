@@ -1,0 +1,20 @@
+version: "2"
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: ./Dockerfile.development
+    container_name: app
+    command: "npm run dev-start"
+    volumes:
+      - ./:/app
+    ports:
+      - "3000:3000"
+
+  db:
+    image: postgres
+    container_name: app_db
+    expose: 
+      - 5432
+
